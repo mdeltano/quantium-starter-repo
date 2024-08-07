@@ -19,14 +19,11 @@ print(df)
 fig = px.line(df, x="date", y="sales", color="location")
 
 app.layout = html.Div(children=[
-    html.H1(children='Hello Dash'),
+    html.H1(children='Sales of Pink Morsel'),
 
-    html.Div(children='''
-        Dash: A web application framework for your data.
-    '''),
 
     dcc.Graph(
-        id='example-graph',
+        id='Pink Morsel',
         figure=fig
     )
 ])
