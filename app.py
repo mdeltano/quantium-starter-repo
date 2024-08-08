@@ -34,7 +34,8 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         style={
             'textAlign': 'center',
             'color': colors['text']
-        }
+        },
+        id='head'
     ),
     dcc.RadioItems(['north', 'south', 'east', 'west', 'all'], value='all', id='select'),
 
@@ -56,6 +57,7 @@ def update_graph(option):
         figNew = px.line(df, x="date", y="sales", color="location")
 
     return figNew
+
 
 if __name__ == '__main__':
     app.run(debug=True)
